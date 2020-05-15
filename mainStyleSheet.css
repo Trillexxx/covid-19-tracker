@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+body {
+  background: rgb(0, 8, 30);
+
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+#main {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*=======================*/
+
+#MainHeader {
+  margin: 0px auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#mainHeader img{
+  margin: 0px auto;
+  width: 100%;
+}
+
+/*
+=========================================
+  SCROLLBAR
+=========================================
+*/
+
+.scrollbar
+{
+  overflow-y: scroll;
+  float: right;
+}
+
+body::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+  background-color: rgb(0, 8, 30);
+}
+
+body::-webkit-scrollbar
+{
+	width: 5px;
+  background-color: rgb(0, 8, 30);
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+/*
+=========================================
+  Loading symbol
+=========================================
+*/
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loader div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.loader div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.loader div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.loader div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.loader div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.loader div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.loader div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.loader div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.loader div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.loader div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.loader div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.loader div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.loader div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.loader div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.loader div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.loader div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.loader div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+=========================================
+  Scroll Down arrow
+=========================================
+*/
+
+#containerArrow {
+  width: 100%;
+}
+
+.arrow{
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+
+/*
+=========================================
+  BUTTON
+=========================================
+*/
+
+button{
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 10px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.SexyButton {
+  background-color: transparent;
+  color: #696969;
+  font: sans-serif;
+  font-weight: bold;
+  border: 2px solid #555555;
+}
+
+.SexyButton:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+/*
+=========================================
+  Graphs
+=========================================
+*/
+
+#globalStatisticsGraph {
+  width:100%; 
+  height:600px;
+}
+
+#statisticsGraph1, #statisticsGraph2 {
+  width: 70%;
+  height:500px;
+}
+
+/*
+=========================================
+  TABLE
+=========================================
+*/
+
+#countryTable {
+  width: 79%;
+}
+
+#statisticsTable {
+  width: 85%;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  margin: 0px auto;
+  width: 100%;
+
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+
+  cursor: pointer;
+
+  position: sticky;
+  top: 0;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+
+  position: sticky;
+  top: 0;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+
+}
+
+
+.sexyTable {
+  font-family: Graphik, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  box-shadow: rgba(159, 165, 169, 0.2) 0px 0px 0.4rem 0px, rgba(159, 165, 169, 0.3) 0px 0.4rem 1rem 0px;
+  max-width: 100%;
+  display: block;
+  border-spacing: 0px;
+  border-radius: 0.6rem;
+
+  padding: 2rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.sexyTable th {
+  color: rgb(139, 148, 155);
+  background-color: rgb(0, 8, 30) !important;
+  background: rgb(0, 8, 30) !important;
+
+  text-align: left;
+  font-size: 1.6rem;
+  padding-right: 2rem;
+
+}
+
+
+.sexyTable td {
+  color: rgb(139, 148, 155);
+
+  text-align: left;
+  font-size: 1.0rem;
+  padding-right: 2rem;
+
+}
+
+.sexyTable th, .sexyTable td {
+
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(159, 165, 169, 0.2);
+  border-right: 1px solid rgba(159, 165, 169, 0.2);
+}
+
+.sexyTable th:last-child, .sexyTable td:last-child {
+  border-right: hidden;
+}
+
+.sexyTable img {
+  vertical-align: middle;
+}
+
+.sexyTable thead {
+  line-height: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sexyTable tbody {
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sexyTable tbody tr:nth-child(2n+1) {
+  background: rgb(4, 11, 28);
+}
+
+
+/* Search bar for table*/
+
+form{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover{
+  width: 250px;
+  cursor: pointer;
+}
+
+form input::placeholder{
+  text-transform: uppercase;
+}
+
+.fa:focus{
+  width: 50%;
+  transition: all 1s;
+
+}
+
+
+form:hover input{
+  display: block;
+}
+
+form:hover .fa{
+  background: #07051a;
+  color: white;
+}
+
+
+/*
+=========================================
+  ERROR SCREEN
+=========================================
+*/
+
+
+.error{
+  margin: auto;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.face{
+  width:150px;
+  height:150px;
+  border: 9px solid #bdc3c7;
+  border-radius:50%;
+  position:relative;
+  z-index:9999;
+}
+
+
+.mouth{
+  height:10px;
+  width:35px;
+  margin: 0 auto;
+  margin-top: 15px;
+  background-color:#bdc3c7;
+}
+
+.tear{
+  position:absolute;
+  background-color: #3498db;
+  height:0px;
+  width:45px;
+  top:62px;
+}
+
+.tear1{
+  left:29px;
+  border-bottom-left-radius:50%;
+}
+
+.tear2{
+  left:98px;
+  border-bottom-right-radius:50%;
+}
+
+.eye{
+  height:10px;
+  width:45px;
+  background-color:#bdc3c7;
+  display:inline-block;
+  margin-left:20px;
+  margin-top:20px;
+}
+
+.eyebrow{
+  width:30px;
+  font-size:40px;
+  font-weight:bold;
+  color:#bdc3c7;
+  display:inline-block;
+  margin-left:27px;
+  margin-top: 10px;
+  opacity:0;
+}
+
+.eyebrow:nth-child(1){
+  transform:rotate(-20deg);
+}
+
+.eyebrow:nth-child(2){
+  transform:rotate(20deg);
+}
+
+@keyframes mouth{
+  10%{height:30px;width:25px; border:6px solid black;border-radius:50%;margin-top:-8px;}
+  50%{height:30px;width:25px; border:6px solid black;border-radius:50%;margin-top:-8px;}
+  60%{height:10px;width:35px;border-radius:0%;border:none;margin-top:15px;}
+}
+
+@keyframes cry{
+  10%{transform:translateY(-34px);background-color:black;}
+  50%{transform:translateY(-34px);background-color:black;}
+  60%{background-color:#bdc3c7;transform:translateY(0px);}
+}
+
+@keyframes eyebrow{
+  10%{opacity:1;color:black;}
+  50%{opacity:1;color:black;}
+  60%{opacity:0;}
+}
+
+@keyframes face{
+  10%{border-color:black;}
+  50%{border-color:black;}
+  60%{border-color:#bdc3c7;}
+}
+
+@keyframes tear{
+  10%{height:96px;}
+  50%{height:96px;}
+  52%{height:0px;}
+}
+  
+.face{
+animation: face 7s infinite;
+animation-delay:2s;
+}
+
+.mouth{
+animation: mouth 7s infinite;
+animation-delay:2s;
+}
+
+.tear{
+animation: tear 7s infinite;
+animation-delay:2s;
+}
+
+.eye{
+animation: cry 7s infinite;
+animation-delay:2s;
+}
+
+.eyebrow{
+animation: eyebrow 7s infinite;
+animation-delay:2s;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1003px)
+{
+  #gif1{
+    width: 80%;
+    height: auto;
+  }
+  #gif2, #gif3{
+    background-color: transparent;
+    display: none;
+  }
+
+}
+@media screen and (max-height: 600px)
+{
+  .arrow {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 1065px) {
+  .sexyTable {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #countryTable, #statisticsTable {
+    width: 99%;
+  }
+
+  #statisticsGraph1, #statisticsGraph2 {
+    width: 99%;
+  }
+}
